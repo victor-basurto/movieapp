@@ -1,0 +1,39 @@
+:root {
+    --font: 'Karla', sans-serif;
+    --primary-color: #c92502;
+}
+html, body {
+    font-family: var(--font);
+    scroll-behavior: smooth;
+}
+.page-enter-active,
+.page-leave-active { transition: opacity .5s; }
+.page-enter,
+.page-leave-to { opacity: 0; }
+.app {
+    background-color: #211f1f;
+    min-height: 100vh;
+}
+:where(p, span) { color: #fff; }
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.button-light {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    &:hover {
+        border-color: transparent;
+    }
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
